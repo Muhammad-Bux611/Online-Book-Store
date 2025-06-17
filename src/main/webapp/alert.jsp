@@ -15,7 +15,7 @@
             <h4 class="alert-heading">Notice!</h4>
             <p>The book is not stored yet. Kindly store some books of a different category.</p>
             <hr>
-            <a href="addBook.jsp" class="btn btn-primary">Add New Book</a>
+            <a href="categories.jsp" class="btn btn-primary">Add New Book</a>
             <a href="index.jsp" class="btn btn-secondary">Go Back to Home</a>
         </div>
     </div>

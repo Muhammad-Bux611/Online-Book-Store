@@ -38,7 +38,7 @@ public class BookDAO {
 			if (books!=null) {
 			
 			for (Book book2 : books) {
-				if (book2.title.equals(book.title)) {
+				if (book2.title.equalsIgnoreCase(book.title)) {
 
 					System.out.println("this book is already exists");
 					return false;

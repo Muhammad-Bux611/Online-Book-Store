@@ -63,6 +63,7 @@ public class BookServlet extends HttpServlet {
 					session.setAttribute("role", role);
 					session.setAttribute("books", books);
 					resp.sendRedirect("viewBooks.jsp");
+					
 				}else {
 					BookDAO Bookdao = new BookDAO();
 					CategoryDAO categoryDAO= new CategoryDAO();
@@ -76,9 +77,6 @@ public class BookServlet extends HttpServlet {
 					}
 					}
 				}
-//				IF THERE IS NO BOOK IN THE BOOK TABLE
-				resp.sendRedirect("dataDeleted.jsp");
-				
 			}else {
 //				IF THERE IS NO BOOK IN THE BOOK TABLE AND ALSO I WANT OT DELETE THEN THE ERROR OCCUR
 				resp.sendRedirect("deleteFailed.jsp");
@@ -132,7 +130,7 @@ public class BookServlet extends HttpServlet {
 		if (flag) {
 			resp.sendRedirect("bookAdded.jsp");
 		}else {
-			resp.getWriter().print("the book is not added due to some reason");
+			resp.getWriter().print("this tite book is already added");
 		}
 		
 	}else if (action.equals("update")) {   //Condition to update the book data
